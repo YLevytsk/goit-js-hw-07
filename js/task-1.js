@@ -1,16 +1,19 @@
 
-const categories = document.querySelectorAll('#categories .item');
+// Находим список категорий по ID
+const categoriesList = document.querySelector('#categories');
 
-console.log(`Количество категорий: ${categories.length}`);
+// Считаем количество категорий (элементов li с классом item)
+const categoryItems = categoriesList.querySelectorAll('.item');
+console.log(`Number of categories: ${categoryItems.length}`);
 
-categories.forEach(category => {
-  
-  const categoryName = category.querySelector('h2').textContent;
+// Перебираем каждую категорию и выводим данные
+categoryItems.forEach((category) => {
+  // Находим заголовок h2 внутри категории
+  const categoryTitle = category.querySelector('h2').textContent;
 
- 
-  const subcategoryCount = category.querySelectorAll('ul li').length;
+  // Считаем количество элементов в подсписке ul внутри категории
+  const elementsCount = category.querySelectorAll('ul li').length;
 
-  
-  console.log(`Категория: ${categoryName}`);
-  console.log(`Количество элементов в категории: ${subcategoryCount}`);
+  console.log(`Category: ${categoryTitle}`);
+  console.log(`Elements: ${elementsCount}`);
 });
