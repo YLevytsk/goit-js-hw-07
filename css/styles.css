@@ -12,6 +12,13 @@ body {
     margin: 0;
     padding: 0;
   }
+  /* Стиль для контейнера с категориями */
+.timer-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 32px; /* Отступ вниз от категорий до галереи */
+  }
   
   /* Стиль для контейнера галереи */
   .gallery-container {
@@ -21,14 +28,17 @@ body {
   }
   
   /* Стиль для списка галереи */
-  .gallery {
+ /* Стиль для списка галереи */
+.gallery {
     display: flex;
     flex-wrap: wrap; /* Позволяет изображениям переходить на новую строку */
     gap: 16px; /* Расстояние между изображениями */
+    justify-content: center; /* Центрирует элементы галереи по горизонтали */
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto; /* Центрирует контейнер по горизонтали */
   }
+  
   
   /* Стиль для каждого элемента галереи */
   .gallery li {
@@ -60,13 +70,17 @@ body {
   }
   
   /* Стиль для списка категорий */
+/* Стиль для списка категорий */
   #categories {
     display: flex;
     gap: 40px; /* Отступы между категориями */
     list-style: none;
     padding: 0;
     margin: 0;
+    padding-left: 32px; /* Отступ слева на 32px */
+    padding-right: 32px; /* Отступ справа на 32px */
   }
+  
   
   /* Стиль для каждого элемента категории */
   #categories .item {
