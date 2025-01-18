@@ -1,3 +1,4 @@
+/* Основные стили */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,55 +13,26 @@ body {
     padding: 0;
   }
   
-  #categories .item {
-    margin-bottom: 16px;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    margin-top: 32px;
-  }
-  
-  .gallery-item {
-    overflow: hidden;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .gallery-item img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  /* Стили для контейнера галереи */
-.gallery-container {
+  /* Стиль для контейнера галереи */
+  .gallery-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
   }
   
-  /* Стили для списка галереи */
+  /* Стиль для списка галереи */
   .gallery {
     display: flex;
-    flex-wrap: wrap; /* позволяет изображениям переходить на новую строку */
-    gap: 16px; /* расстояние между изображениями */
+    flex-wrap: wrap; /* Позволяет изображениям переходить на новую строку */
+    gap: 16px; /* Расстояние между изображениями */
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  /* Стили для каждого элемента галереи */
+  /* Стиль для каждого элемента галереи */
   .gallery li {
-    flex: 1 1 calc(33.333% - 16px); /* каждому элементу 1/3 ширины, с учётом отступов */
+    flex: 1 1 calc(33.333% - 16px); /* Каждому элементу 1/3 ширины с учетом отступов */
     box-sizing: border-box;
     max-width: calc(33.333% - 16px);
   }
@@ -68,7 +40,53 @@ body {
   /* Стили для изображений внутри галереи */
   .gallery img {
     width: 100%;
-    height: auto;
-    border-radius: 8px; /* скругление углов изображений */
+    height: 100%; /* Заставляем изображение заполнять весь контейнер по высоте */
+    object-fit: cover; /* Обеспечивает правильное заполнение пространства */
+    border-radius: 8px; /* Скругление углов изображений */
+    display: block; /* Убирает лишние отступы */
   }
+  
+  /* Галерея с наведением */
+  .gallery-item {
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Стиль для списка категорий */
+  #categories {
+    display: flex;
+    gap: 40px; /* Отступы между категориями */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Стиль для каждого элемента категории */
+  #categories .item {
+    display: flex;
+    flex-direction: column; /* Размещение подкатегорий в столбик */
+    align-items: flex-start; /* Выравнивание подкатегорий по левому краю */
+  }
+  
+  /* Заголовок каждой категории */
+  #categories .item h2 {
+    margin-bottom: 10px; /* Отступ от заголовка */
+  }
+  
+  /* Стили для подкатегорий */
+  #categories .item > ul {
+    display: flex;
+    flex-direction: column; /* Элементы подкатегории расположены в столбик */
+    padding-left: 20px;
+    margin: 0;
+    list-style: none;
+  }
+  
   
