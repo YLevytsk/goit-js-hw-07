@@ -13,9 +13,7 @@ body {
     padding: 0;
   }
   /* Стиль для контейнера с категориями */
-.timer-1 {
-    max-width: 1200px;
-    margin: 0 auto;
+  .timer-1 {
     padding: 20px;
     margin-bottom: 32px; /* Отступ вниз от категорий до галереи */
   }
@@ -26,7 +24,6 @@ body {
     margin: 0 auto;
     padding: 20px;
   }
-  
   /* Стиль для списка галереи */
  /* Стиль для списка галереи */
 .gallery {
@@ -101,6 +98,7 @@ body {
     padding-left: 20px;
     margin: 0;
     list-style: none;
+    margin-bottom: 32px;
   }
   
   
