@@ -32,11 +32,12 @@ const images = [
   // Create the gallery items and append them in one operation
   const galleryItems = images.map(image => {
     const li = document.createElement('li');
+    li.classList.add('gallery-item'); // Add the class for styling
+  
     const img = document.createElement('img');
-    
     img.src = image.url;
     img.alt = image.alt;
-    
+  
     li.appendChild(img);
     
     return li;
@@ -45,7 +46,7 @@ const images = [
   // Append all gallery items at once
   gallery.append(...galleryItems);
   
-  // Add styles via classList.add()
+  // Add styles directly to the document
   const style = document.createElement('style');
   document.head.appendChild(style);
   style.textContent = `
@@ -61,10 +62,8 @@ const images = [
     }
   
     .gallery-item {
-      width: 360px;
-      height: 300px;
-      margin-bottom: 48px;
-      margin-right: 24px;
+       width: calc(33.33% - 24px);
+       margin-bottom: 48px;
     }
   
     .gallery-item img {
