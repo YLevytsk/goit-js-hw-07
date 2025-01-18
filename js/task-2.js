@@ -1,4 +1,4 @@
-// Image data
+
 const images = [
     { 
       url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -26,10 +26,10 @@ const images = [
     }
   ];
   
-  // Select the gallery element
+  
   const gallery = document.querySelector('.gallery');
   
-  // Create the gallery items and append them in one operation
+ 
   const galleryItems = images.map(image => {
     const li = document.createElement('li');
     li.classList.add('gallery-item'); // Add the class for styling
@@ -43,10 +43,10 @@ const images = [
     return li;
   });
   
-  // Append all gallery items at once
+ 
   gallery.append(...galleryItems);
   
-  // Add styles directly to the document
+  
   const style = document.createElement('style');
   document.head.appendChild(style);
   style.textContent = `
